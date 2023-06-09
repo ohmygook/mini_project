@@ -65,7 +65,7 @@ def get_link(csv_name, page_num):
         soup = bs(source_code_from_URL, 'lxml', from_encoding='utf-8')  # lxml parsing
 
         try:
-            for j in range(10):
+            for j in range(10): # 한 페이지에 게시물 10개라서 len(j)=10
                 paper_link = soup.select('li > div.cont > p.title > a')[j]['href']      # parsing 하고 class=title인 <p> tag 밑에 있는 <a> 태그에 j 번째 ['href'] 속성값을 갖는 링크 불러옴
                 paper_url = "http://riss.or.kr" + paper_link
 
@@ -90,7 +90,8 @@ def get_reference(URL):
     soup = bs(html, "html.parser")      # html parsing
     title = soup.find("h3", "title")    # <h3 class='title'> 첫 번째 요소 가져옴.
     
-    title_kor = ''      # 영문, 국문 제목 중 하나만 있는 경우 존재 -> 없을 때는 빈 문자열로 출력하기 위해서
+    # 영문, 국문 제목 중 하나만 있는 경우 존재 -> 없을 때는 빈 문자열로 출력하기 위해서gg 
+    title_kor = ''      
     title_eng = ''
 
     title_txt = title.get_text("", strip=True)  # strip은 문자열 앞 뒤 공백을 제거해주는 파이썬 문자열 메소드
