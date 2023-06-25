@@ -1,0 +1,283 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block scripts %}
+{{ block.super }}
+<script>
+
+</script>
+{% endblock %}
+
+{% block body %}
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <h2>Jiujitsu Album</h2>
+                <p>당신이 열정적인 순간, 소중한 순간, 빛나는 순간 moment!!</p>
+            </div>
+
+            <div class="row" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <ul id="portfolio-flters">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-class">수업사진</li>
+                        <li data-filter=".filter-group">단체</li>
+                        <li data-filter=".filter-single">개인</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-group">
+                    <div class="portfolio-wrap">
+                        <img src="../static/assets/img/jiujitsu/jiujitsu-3.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>오전부 수업</h4>
+                            <p>단체</p>
+                            <div class="portfolio-links">
+                                <a href="../static/assets/img/jiujitsu/jiujitsu-3.jpg" data-gall="portfolioGallery"
+                                    class="venobox" title="오전부 수업"><i class="bx bx-plus"></i></a>
+                                <a href="/album_view" title="More Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-single">
+                    <div class="portfolio-wrap">
+                        <img src="/static/assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>single 3</h4>
+                            <p>single</p>
+                            <div class="portfolio-links">
+                                <a href="/static/assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery"
+                                    class="venobox" title="single 3"><i class="bx bx-plus"></i></a>
+                                <a href="/portfolio_detail" title="More Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-class">
+                    <div class="portfolio-wrap">
+                        <img src="/static/assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>App 2</h4>
+                            <p>class</p>
+                            <div class="portfolio-links">
+                                <a href="/static/assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery"
+                                    class="venobox" title="App 2"><i class="bx bx-plus"></i></a>
+                                <a href="/portfolio_detail" title="More Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-group">
+                    <div class="portfolio-wrap">
+                        <img src="/static/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>group 2</h4>
+                            <p>group</p>
+                            <div class="portfolio-links">
+                                <a href="/static/assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery"
+                                    class="venobox" title="group 2"><i class="bx bx-plus"></i></a>
+                                <a href="/portfolio_detail" title="More Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-single">
+                    <div class="portfolio-wrap">
+                        <img src="/static/assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>single 2</h4>
+                            <p>single</p>
+                            <div class="portfolio-links">
+                                <a href="/static/assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery"
+                                    class="venobox" title="single 2"><i class="bx bx-plus"></i></a>
+                                <a href="/portfolio_detail" title="More Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="/static/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>App 3</h4>
+                            <p>class</p>
+                            <div class="portfolio-links">
+                                <a href="/static/assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery"
+                                    class="venobox" title="App 3"><i class="bx bx-plus"></i></a>
+                                <a href="/portfolio_detail" title="More Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-group">
+                    <div class="portfolio-wrap">
+                        <img src="/static/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>group 1</h4>
+                            <p>group</p>
+                            <div class="portfolio-links">
+                                <a href="/static/assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery"
+                                    class="venobox" title="group 1"><i class="bx bx-plus"></i></a>
+                                <a href="/portfolio_detail" title="More Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-group">
+                    <div class="portfolio-wrap">
+                        <img src="/static/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>group 3</h4>
+                            <p>group</p>
+                            <div class="portfolio-links">
+                                <a href="/static/assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery"
+                                    class="venobox" title="group 3"><i class="bx bx-plus"></i></a>
+                                <a href="/portfolio_detail" title="More Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-single">
+                    <div class="portfolio-wrap">
+                        <img src="/static/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>single 3</h4>
+                            <p>single</p>
+                            <div class="portfolio-links">
+                                <a href="/static/assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery"
+                                    class="venobox" title="single 3"><i class="bx bx-plus"></i></a>
+                                <a href="/portfolio_detail" title="More Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Section -->
+
+
+</main><!-- End #main -->
+
+{% endblock %}
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block scripts %}
+{{ block.super }}
+<script>
+    function addAlbum() {
+        alert('Adding...');
+    }
+</script>
+{% endblock %}
+
+{% block body %}
+
+{% include "navbar.html" %}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h4>Album</h4>
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li>Album</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <h2>Jiujitsu Album</h2>
+                <p>당신이 열정적인 순간, 소중한 순간, 빛나는 순간 moment!!</p>
+            </div>
+
+            <div class="row" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <ul id="portfolio-flters">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-class">수업사진</li>
+                        <li data-filter=".filter-group">단체</li>
+                        <li data-filter=".filter-single">개인</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row" data-aos="fade-up" data-aos-delay="200">
+                <div style="padding:10px 20px;width:100%;text-align:right;">
+                    <a href="/album_write"><button>ADD</button></a>
+                </div>
+            </div>
+
+            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+
+                {% if not rsAlbum %}
+                <div class="col-lg-4 col-md-6 portfolio-item filter-class">
+                    <p class="text-center">앨범 사진이 없습니다... </p>
+                </div>
+                {% endif %}
+
+                {% for i in rsAlbum %}
+                {% if i.a_type == '수업' %}
+                <div class="col-lg-4 col-md-6 portfolio-item filter-class">
+                    {% elif i.a_type == '단체' %}
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-group">
+                        {% else %}
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-single">
+                            {% endif %}
+                            <div class="portfolio-wrap">
+                                <img src="{% static 'assets/img/jiujitsu/' %}{{ i.a_image }}" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4>{{ i.a_title }}</h4>
+                                    <p>{{ i.a_type }}</p>
+                                    <div class="portfolio-links">
+                                        <a href="{% static 'assets/img/jiujitsu/' %}{{ i.a_image }}"
+                                            data-gall="portfolioGallery" class="venobox" title="App 1"><i
+                                                class="bx bx-plus"></i></a>
+                                        <a href="/album_view?a_no={{ i.a_no }}" title="More Details"><i
+                                                class="bx bx-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+            </div>
+    </section><!-- End Portfolio Section -->
+
+</main><!-- End #main -->
+
+{% include "footer.html" %}
+
+{% endblock %}

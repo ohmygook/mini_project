@@ -10,14 +10,14 @@
     <div class="container">
         <div class="row"> 
             <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
-                <h1 data-aos="fade-up">게시판 만들기</h1>
-                <h2 data-aos="fade-up" data-aos-delay="400">꾸준하게!</h2>
+                <h1 data-aos="fade-up">질문 게시판</h1>
+                <h2 data-aos="fade-up" data-aos-delay="400" style="font-size:x-large;">Win or Learn!</h2>
                 <div data-aos="fade-up" data-aos-delay="800">
-                    <a href="/board" class="btn-get-started scrollto">바로가기</a>
+                    <a href="https://respectmm.modoo.at/" target="_blank" class="btn-get-started scrollto">바로가기</a>
                 </div>
             </div>
             <div class ="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
-                <img src="{% static 'assets/img/hero-img.png' %}" class="img-fluid animated" alt="">
+                <img src="../static/assets/img/jiujitsu/jiujitsu-9.jpg" class="img-fluid animated" alt="">
             </div>
         </div>
     </div>
@@ -25,12 +25,9 @@
 </section><!-- End Hero -->
 
 <main id="main">
-    
-    <h3>게시판을 작성해 봅시다.</h3> 
-    <img src="../static/_images/cop.png" />
 
 </main><!-- End #main -->
 
-
+    {% include "album_list.html" %}
     {% include "footer.html" %}
 {% endblock %}   
