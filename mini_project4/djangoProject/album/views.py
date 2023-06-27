@@ -2,6 +2,7 @@ from django.shortcuts import render
 from album.models import Album
 from django.shortcuts import redirect
 
+
 from django.core.files.storage import FileSystemStorage
 import datetime
 import random
@@ -12,6 +13,9 @@ from django.http import HttpResponse, JsonResponse
 
 from django.views.decorators.csrf import csrf_exempt
 
+
+def home(request):
+    return render(request, "home.html")
 
 def album(request):
     rsAlbum = Album.objects.all().filter(a_usage='1')
