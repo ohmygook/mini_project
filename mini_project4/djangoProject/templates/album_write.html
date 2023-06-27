@@ -3,40 +3,7 @@
 
 {% block scripts %}
 {{ block.super }}
-<script>
-    function insertAlbum() {
 
-        var atitle = document.getElementById("a_title").value;
-
-        if (atitle == "") {
-            alert("제목을 넣어 주세요.");
-            document.getElementById("a_title").focus();
-            return false;
-        }
-
-        if (document.getElementById("a_type1").checked) {
-            var atype = "수업사진";
-        }
-        else if (document.getElementById("a_type2").checked) {
-            var atype = "단체";
-        }
-        else if (document.getElementById("a_type3").checked) {
-            var atype = "개인";
-        }
-        else {
-            alert("유형을 선택하세요.");
-            return false;
-        }
-
-        var ufile = document.getElementById("ufile").value;
-
-        if (ufile == "") {
-            alert("사진을 넣어 주세요.");
-            return false;
-        }
-        document.getElementById("frmAlbum").submit();
-    }
-</script>
 {% endblock %}
 
 {% block body %}
@@ -52,7 +19,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <h4>Album 등록</h4>
                 <ol>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="/board">Album</a></li>
                     <li>등록</li>
                 </ol>
@@ -100,6 +67,40 @@
                             <td width="100%" colspan="2">
                                 <span class="btn btn-outline-success my-2 my-sm-0" style="margin-right:10px;"
                                     onclick="insertAlbum()">저장</span>
+                                    <script>
+                                        function insertAlbum() {
+
+                                            var atitle = document.getElementById("a_title").value;
+
+                                            if (atitle == "") {
+                                                alert("제목을 넣어 주세요.");
+                                                document.getElementById("a_title").focus();
+                                                return false;
+                                            }
+
+                                            if (document.getElementById("a_type1").checked) {
+                                                var atype = "수업사진";
+                                            }
+                                            else if (document.getElementById("a_type2").checked) {
+                                                var atype = "단체";
+                                            }
+                                            else if (document.getElementById("a_type3").checked) {
+                                                var atype = "개인";
+                                            }
+                                            else {
+                                                alert("유형을 선택하세요.");
+                                                return false;
+                                            }
+
+                                            var ufile = document.getElementById("ufile").value;
+
+                                            if (ufile == "") {
+                                                alert("사진을 넣어 주세요.");
+                                                return false;
+                                            }
+                                            document.getElementById("frmAlbum").submit();
+                                        }
+                                    </script>
                                 <a href="/album">
                                     <span class="btn btn-outline-success my-2 my-sm-0"
                                         style="margin-right:10px;">목록</span>

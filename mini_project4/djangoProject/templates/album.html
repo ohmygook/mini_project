@@ -4,9 +4,7 @@
 {% block scripts %}
 {{ block.super }}
 <script>
-    function addAlbum() {
-        alert('Adding...');
-    }
+
 </script>
 {% endblock %}
 
@@ -21,10 +19,10 @@
         <div class="container">
 
             <div class="d-flex justify-content-between align-items-center">
-                <h4>Album</h4>
+                <h4>Portfolio</h4>
                 <ol>
                     <li><a href="/">Home</a></li>
-                    <li>Album</li>
+                    <li>Portfolio</li>
                 </ol>
             </div>
 
@@ -36,66 +34,46 @@
         <div class="container">
 
             <div class="section-title" data-aos="fade-up">
-                <h2>Jiujitsu Album</h2>
-                <p>당신이 열정적인 순간, 소중한 순간, 빛나는 순간 moment!!</p>
+                <h2>Portfolio</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
             </div>
 
             <div class="row" data-aos="fade-up" data-aos-delay="200">
                 <div class="col-lg-12 d-flex justify-content-center">
                     <ul id="portfolio-flters">
                         <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-class">수업</li>
-                        <li data-filter=".filter-group">단체</li>
-                        <li data-filter=".filter-single">개인</li>
+                        <li data-filter=".filter-app">App</li>
+                        <li data-filter=".filter-card">Card</li>
+                        <li data-filter=".filter-web">Web</li>
                     </ul>
-                </div>
-            </div>
-
-            <div class="row" data-aos="fade-up" data-aos-delay="200">
-                <div style="padding:10p x 20px;width:100%;text-align:right;">
-                    <a href="/album_write"><button>ADD</button></a>
                 </div>
             </div>
 
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
 
-                {% if not rsAlbum %}
-                <div class="col-lg-4 col-md-6 portfolio-item filter-class">
-                    <p class="text-center">앨범 사진이 없습니다. </p>
-                </div>
-                {% endif %}
-
-                {% for i in rsAlbum %}
-                {% if i.a_type == '수업' %}
-                <div class="col-lg-4 col-md-6 portfolio-item filter-class">
-                    {% elif i.a_type == '단체' %}
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-group">
-                        {% else %}
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-single">
-                            {% endif %}
-                            <div class="portfolio-wrap">
-                                <img src="../static/board/photos/{{ i.a_image }}" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h4>{{ i.a_title }}</h4>
-                                    <p>{{ i.a_type }}</p>
-                                    <div class="portfolio-links">
-                                        <a href="../static/board/photos/{{ i.a_image }}" data-gall="portfolioGallery"
-                                            class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
-                                        <a href="/album_view?a_no={{ i.a_no }}" title="More Details"><i
-                                                class="bx bx-link"></i></a>
-                                    </div>
-                                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="/static/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>App 1</h4>
+                            <p>App</p>
+                            <div class="portfolio-links">
+                                <a href="/static/assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery"
+                                    class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
+                                <a href="/portfolio_detail" title="More Details"><i class="bx bx-link"></i></a>
                             </div>
                         </div>
-                        {% endfor %}
-
                     </div>
-
                 </div>
 
             </div>
+
+        </div>
     </section><!-- End Portfolio Section -->
 
+
 </main><!-- End #main -->
+
+{% include "footer.html" %}
 
 {% endblock %}

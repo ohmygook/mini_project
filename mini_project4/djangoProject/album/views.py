@@ -15,11 +15,14 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 def home(request):
-    return render(request, "home.html")
+    rsAlbum = Album.objects.all().filter(a_usage='1')
+    return render(request, "home.html", {
+        'rsAlbum': rsAlbum
+    })
+    # return render(request, "home.html")
 
 def album(request):
     rsAlbum = Album.objects.all().filter(a_usage='1')
-
     return render(request, "album_list.html", {
         'rsAlbum': rsAlbum
     })
