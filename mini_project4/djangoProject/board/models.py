@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+# Database board의 테이블 구조 정의 
 
 class Board(models.Model):
     b_no = models.AutoField(db_column='b_no',primary_key=True)
@@ -17,3 +17,7 @@ class Board(models.Model):
 
     def __str__(self):
         return "제목: " + self.b_title + ", 작성자 : " +self.b_writer
+    
+
+
+    

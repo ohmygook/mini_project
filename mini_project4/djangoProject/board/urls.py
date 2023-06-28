@@ -1,6 +1,11 @@
+# URL 패턴 정의 위해 import path
 from django.urls import path
 
+# views.py에 있는 뷰 함수 정의하기 위해 현재 모듈에(='.') import views
 from . import views
+
+# '/'과 함께 사용하여 views 함수 호출
+# /board => views.board
 urlpatterns = [
     path('',views.home, name='home'),
     path('board',views.board,name="board"),

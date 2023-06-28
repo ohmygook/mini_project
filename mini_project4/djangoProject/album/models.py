@@ -1,5 +1,6 @@
 from django.db import models
 
+# Database album의 테이블 구조 정의
 
 class Album(models.Model):
     a_no = models.AutoField(db_column='a_no', primary_key=True)

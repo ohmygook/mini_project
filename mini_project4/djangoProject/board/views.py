@@ -1,10 +1,14 @@
 from django.shortcuts import render, redirect
 from board.models import Board
 
-# Create your views here.
+
+# 클라이언트의 요청을 처리하고 응답을 반환하는 함수 또는 클래스 기반의 뷰를 정의
+
+# /home : 홈 화면 return
 def home(request):
     return render(request,"home.html")
 
+# board_list.html 렌더링 할 때 rsBoard 변수를 context로 전달해 템플릿에 게시물 목록 표시
 def board(request):
     rsBoard = Board.objects.all()
 
