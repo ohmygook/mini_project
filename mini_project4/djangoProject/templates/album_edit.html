@@ -44,20 +44,23 @@
                         <tr style="height:45px;border-top:solid 1px #dddddd;">
                             <td width="20%" align="center">유형</td>
                             <td width="80%" align="left">
-                                {% if i.a_type == "여행" %}
-                                <input type="radio" name="a_type" id="a_type1" value="수업사진" checked>수업사진
+                                
+                                {% if i.a_type == "단체" %}
+                                <input type="radio" name="a_type" id="a_type1" value="단체" checked>단체
                                 {% else %}
                                 <input type="radio" name="a_type" id="a_type1" value="단체">단체
                                 {% endif %}
-                                {% if i.a_type == "생활" %}
-                                <input type="radio" name="a_type" id="a_type2" value="개인" checked>개인
+
+                                {% if i.a_type == "수업" %}
+                                <input type="radio" name="a_type" id="a_type2" value="수업" checked>수업
                                 {% else %}
-                                <input type="radio" name="a_type" id="a_type2" value="생활">생활
+                                <input type="radio" name="a_type" id="a_type2" value="수업">수업
                                 {% endif %}
-                                {% if i.a_type == "놀이" %}
-                                <input type="radio" name="a_type" id="a_type3" value="놀이" checked>놀이
+
+                                {% if i.a_type == "개인" %}
+                                <input type="radio" name="a_type" id="a_type3" value="개인" checked>개인
                                 {% else %}
-                                <input type="radio" name="a_type" id="a_type3" value="놀이">놀이
+                                <input type="radio" name="a_type" id="a_type3" value="개인">개인
                                 {% endif %}
                             </td>
                         </tr>
